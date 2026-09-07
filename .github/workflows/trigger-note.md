@@ -1,0 +1,1 @@
+APK CI is enabled in `build-apk.yml`. A push to `main` starts the build automatically.
