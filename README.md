@@ -16,3 +16,4 @@ Open the project in Android Studio and build the `app` module.
 
 Application ID: `com.libremind.game`
 Version: `1.0`
+
