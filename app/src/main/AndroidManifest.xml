@@ -2,6 +2,8 @@
     <application
         android:theme="@style/Theme.LibreMind"
         android:label="LibreMind"
+        android:icon="@drawable/libremind_icon"
+        android:roundIcon="@drawable/libremind_icon"
         android:allowBackup="true"
         android:supportsRtl="true">
         <activity android:name=".MainActivity" android:screenOrientation="portrait" android:exported="true">
