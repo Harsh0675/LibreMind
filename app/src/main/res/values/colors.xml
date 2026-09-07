@@ -1,3 +1,8 @@
 <resources>
-    <color name="purple">#6750A4</color>
+    <color name="purple">#7656D8</color>
+    <color name="libremind_night">#191630</color>
+    <color name="libremind_surface">#30284C</color>
+    <color name="libremind_card">#3A2E61</color>
+    <color name="libremind_lavender">#D9CCFF</color>
+    <color name="libremind_mint">#3C7B70</color>
 </resources>
