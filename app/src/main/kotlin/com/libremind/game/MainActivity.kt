@@ -263,25 +263,29 @@ class MainActivity : ComponentActivity() {
         resolving = false
     }
 
+    // Show the symbol immediately, then animate the card. This avoids the symbol being
+    // hidden during a cancelled/delayed animation on slower Android devices.
     private fun reveal(index: Int) {
         val v = buttons[index]
-        v.animate().scaleX(0.88f).scaleY(0.96f).setDuration(70).withEndAction {
-            v.text = cards[index]
-            v.setTextColor(Color.WHITE)
-            v.background = rounded(0xFF7656D8.toInt(), d(14).toFloat())
-            v.animate().scaleX(1f).scaleY(1f).setDuration(120).start()
-        }.start()
+        v.animate().cancel()
+        v.text = cards[index]
+        v.setTextColor(Color.WHITE)
+        v.background = rounded(0xFF7656D8.toInt(), d(14).toFloat())
+        v.scaleX = 0.88f
+        v.scaleY = 0.96f
+        v.animate().scaleX(1f).scaleY(1f).setDuration(140).start()
     }
 
     private fun hide(index: Int) {
         if (index !in buttons.indices || !buttons[index].isEnabled) return
         val v = buttons[index]
-        v.animate().scaleX(0.88f).setDuration(70).withEndAction {
-            v.text = "✦"
-            v.setTextColor(0xFFE7DDFF.toInt())
-            v.background = rounded(0xFF34285A.toInt(), d(14).toFloat())
-            v.animate().scaleX(1f).setDuration(120).start()
-        }.start()
+        v.animate().cancel()
+        v.text = "✦"
+        v.setTextColor(0xFFE7DDFF.toInt())
+        v.background = rounded(0xFF34285A.toInt(), d(14).toFloat())
+        v.scaleX = 0.88f
+        v.scaleY = 0.96f
+        v.animate().scaleX(1f).scaleY(1f).setDuration(140).start()
     }
 
     private fun finishGame() {
