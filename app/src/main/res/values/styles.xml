@@ -1,9 +1,13 @@
 <resources>
     <style name="Theme.LibreMind" parent="android:style/Theme.Material.Light.NoActionBar">
         <item name="android:fontFamily">sans</item>
-        <item name="android:colorAccent">#6750A4</item>
-        <item name="android:navigationBarColor">#F8F7FC</item>
-        <item name="android:statusBarColor">#F8F7FC</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">#9A7BFF</item>
+        <item name="android:windowBackground">#191630</item>
+        <item name="android:statusBarColor">#191630</item>
+        <item name="android:navigationBarColor">#191630</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 </resources>
