@@ -204,7 +204,6 @@ class MainActivity : ComponentActivity() {
                 columnSpec = GridLayout.spec(index % size, 1f)
                 rowSpec = GridLayout.spec(index / size, 1f)
                 setMargins(d(4), d(4), d(4), d(4))
-                gravity = Gravity.FILL
             })
             buttons.add(card)
         }
@@ -263,8 +262,6 @@ class MainActivity : ComponentActivity() {
         resolving = false
     }
 
-    // Show the symbol immediately, then animate the card. This avoids the symbol being
-    // hidden during a cancelled/delayed animation on slower Android devices.
     private fun reveal(index: Int) {
         val v = buttons[index]
         v.animate().cancel()
