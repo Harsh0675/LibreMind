@@ -1,0 +1,1 @@
+The GitHub Actions workflow invokes the configured Gradle distribution directly, so a binary Gradle wrapper JAR is not required for CI.
