@@ -3,28 +3,22 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-
-    <path
-        android:fillColor="#24183F"
-        android:pathData="M20,4 L88,4 Q104,4 104,20 L104,88 Q104,104 88,104 L20,104 Q4,104 4,88 L4,20 Q4,4 20,4Z" />
-
-    <path
-        android:fillColor="#8B6AF2"
-        android:pathData="M27,25 L72,25 Q78,25 78,31 L78,76 Q78,82 72,82 L27,82 Q21,82 21,76 L21,31 Q21,25 27,25Z" />
-
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M39,18 L83,18 Q89,18 89,24 L89,68 Q89,74 83,74 L39,74 Q33,74 33,68 L33,24 Q33,18 39,18Z" />
-
-    <path
-        android:fillColor="#6E4ED2"
-        android:pathData="M45,29 L77,29 Q80,29 80,32 L80,38 Q80,41 77,41 L45,41 Q42,41 42,38 L42,32 Q42,29 45,29Z" />
-
-    <path
-        android:fillColor="#6E4ED2"
-        android:pathData="M45,48 C42,48 40,50 40,53 C40,56 42,58 45,58 L51,58 L51,65 C51,68 53,70 56,70 C59,70 61,68 61,65 L61,58 L67,58 C70,58 72,56 72,53 C72,50 70,48 67,48Z" />
-
-    <path
-        android:fillColor="#6E4ED2"
-        android:pathData="M74,78 L77,85 L84,88 L77,91 L74,98 L71,91 L64,88 L71,85Z" />
+    <!-- Warm cream game icon background -->
+    <path android:fillColor="#FFF4D6" android:pathData="M20,0 L88,0 Q108,0 108,20 L108,88 Q108,108 88,108 L20,108 Q0,108 0,88 L0,20 Q0,0 20,0Z" />
+    <path android:fillColor="#FFD166" android:pathData="M10,30 Q54,5 98,30 L98,78 Q54,103 10,78Z" />
+    <!-- Memory cards -->
+    <path android:fillColor="#4CAF50" android:pathData="M17,27 Q17,20 24,20 L47,20 Q54,20 54,27 L54,56 Q54,63 47,63 L24,63 Q17,63 17,56Z" />
+    <path android:fillColor="#FFFDF5" android:pathData="M22,27 Q22,25 25,25 L46,25 Q49,25 49,28 L49,53 Q49,56 46,56 L25,56 Q22,56 22,53Z" />
+    <path android:fillColor="#43A047" android:pathData="M35,31 C27,38 27,46 35,51 C43,46 43,38 35,31Z" />
+    <path android:fillColor="#FF8A3D" android:pathData="M54,27 Q54,20 61,20 L84,20 Q91,20 91,27 L91,56 Q91,63 84,63 L61,63 Q54,63 54,56Z" />
+    <path android:fillColor="#FFFDF5" android:pathData="M59,27 Q59,25 62,25 L83,25 Q86,25 86,28 L86,53 Q86,56 83,56 L62,56 Q59,56 59,53Z" />
+    <path android:fillColor="#FFB300" android:pathData="M74,31 A10,10 0 1 0 74,51 A10,10 0 1 0 74,31Z" />
+    <!-- Friendly brain mascot -->
+    <path android:fillColor="#FF9E80" android:pathData="M43,39 C36,38 31,43 32,49 C27,51 26,58 30,62 C28,69 33,74 39,74 C42,80 50,81 54,76 C58,81 66,80 69,74 C75,74 80,69 78,62 C82,58 81,51 76,49 C77,43 72,38 65,39 C62,34 56,34 54,39 C52,34 46,34 43,39Z" />
+    <path android:fillColor="#FFCC80" android:pathData="M54,39 C50,37 46,39 45,43 C40,41 36,44 37,49 C32,51 33,57 38,58 C34,62 36,68 42,68 C43,73 49,75 54,71Z" />
+    <path android:fillColor="#FF6F61" android:pathData="M54,39 C58,37 62,39 63,43 C68,41 72,44 71,49 C76,51 75,57 70,58 C74,62 72,68 66,68 C65,73 59,75 54,71Z" />
+    <path android:fillColor="#5A3D31" android:pathData="M49,48 C45,46 42,49 44,52 C46,54 49,53 51,51Z" />
+    <path android:fillColor="#5A3D31" android:pathData="M59,48 C63,46 66,49 64,52 C62,54 59,53 57,51Z" />
+    <!-- Sparkle -->
+    <path android:fillColor="#FFFFFF" android:pathData="M54,8 L57,15 L64,18 L57,21 L54,28 L51,21 L44,18 L51,15Z" />
 </vector>
