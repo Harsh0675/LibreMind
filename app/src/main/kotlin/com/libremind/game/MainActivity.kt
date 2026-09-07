@@ -12,6 +12,7 @@ import android.view.View
 import androidx.activity.ComponentActivity
 import kotlin.math.cos
 import kotlin.math.min
+import kotlin.math.sin
 
 class MainActivity : ComponentActivity() {
     private lateinit var game: LibreMindView
