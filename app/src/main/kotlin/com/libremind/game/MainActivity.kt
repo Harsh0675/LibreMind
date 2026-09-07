@@ -1,7 +1,6 @@
 package com.libremind.game
 
 import android.app.AlertDialog
-import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.*
 import android.os.Bundle
@@ -13,12 +12,9 @@ import android.view.View
 import androidx.activity.ComponentActivity
 import kotlin.math.cos
 import kotlin.math.min
-import kotlin.math.sin
-import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
     private lateinit var game: LibreMindView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.statusBarColor = Color.rgb(12, 12, 24)
@@ -26,14 +22,12 @@ class MainActivity : ComponentActivity() {
         game = LibreMindView(this)
         setContentView(game)
     }
-
     override fun onBackPressed() {
         if (game.currentScreen == Screen.GAME) game.goHome() else super.onBackPressed()
     }
 }
 
 private enum class Screen { HOME, GAME }
-
 private data class Mode(val title: String, val subtitle: String, val color: Int, val size: Int, val rush: Boolean)
 
 private class LibreMindView(context: Context) : View(context) {
@@ -69,6 +63,7 @@ private class LibreMindView(context: Context) : View(context) {
     private var running = false
     private var locked = false
     private var pressedIndex = -1
+    private var homePressed = -1
     private var gridLeft = 0f
     private var gridTop = 0f
     private var cell = 0f
@@ -213,7 +208,14 @@ private class LibreMindView(context: Context) : View(context) {
     }
 
     private fun drawIcon(c: Canvas, type: Int, cx: Float, cy: Float, s: Float) {
-        paint.color = when (type % 6) { 0 -> Color.rgb(255, 196, 88); 1 -> Color.rgb(92, 219, 225); 2 -> Color.rgb(255, 121, 153); 3 -> Color.rgb(142, 226, 151); 4 -> Color.rgb(205, 163, 255); else -> Color.rgb(255, 151, 89) }
+        paint.color = when (type % 6) {
+            0 -> Color.rgb(255, 196, 88)
+            1 -> Color.rgb(92, 219, 225)
+            2 -> Color.rgb(255, 121, 153)
+            3 -> Color.rgb(142, 226, 151)
+            4 -> Color.rgb(205, 163, 255)
+            else -> Color.rgb(255, 151, 89)
+        }
         when (type % 6) {
             0 -> c.drawCircle(cx, cy, s * .72f, paint)
             1 -> triangle(c, cx, cy - s * .05f, s * .78f, paint)
