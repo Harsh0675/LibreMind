@@ -86,9 +86,9 @@ class MainActivity : ComponentActivity() {
             orientation = LinearLayout.VERTICAL
             setPadding(0, 18, 0, 0)
         }
-        modes.addView(modeButton("🧠  CLASSIC", "8 pairs • Relaxed", 0xFF7656D8.toInt()) { startGame(4, false) }, lp(0, 0))
-        modes.addView(modeButton("⚡  TIME RUSH", "8 pairs • 60 seconds", 0xFF5B4AC7.toInt()) { startGame(4, true) }, lp(0, 14))
-        modes.addView(modeButton("🌿  ZEN MODE", "18 pairs • No pressure", 0xFF3C7B70.toInt()) { startGame(6, false) }, lp(0, 14))
+        modes.addView(modeButton("🧠  CLASSIC", "8 pairs • Relaxed", 0xFF7656D8.toInt()) { startGame(4, false) }, lp(0, 76))
+        modes.addView(modeButton("⚡  TIME RUSH", "8 pairs • 60 seconds", 0xFF5B4AC7.toInt()) { startGame(4, true) }, lp(0, 76))
+        modes.addView(modeButton("🌿  ZEN MODE", "18 pairs • No pressure", 0xFF3C7B70.toInt()) { startGame(6, false) }, lp(0, 76))
         root.addView(modes, LinearLayout.LayoutParams(-1, 0, 1f))
 
         val footer = text("OFFLINE  •  NO ACCOUNT  •  NO ADS", 12, true, 0xFF8F89A7.toInt())
@@ -185,6 +185,7 @@ class MainActivity : ComponentActivity() {
 
     private fun flip(index: Int) {
         if (!running || index == first || !buttons[index].isEnabled || second != -1) return
+        buttons[index].performHapticFeedback(3)
         animatePress(buttons[index])
         buttons[index].text = cards[index]
         buttons[index].setTextColor(Color.WHITE)
@@ -198,6 +199,8 @@ class MainActivity : ComponentActivity() {
             buttons[second].isEnabled = false
             buttons[first].alpha = 0.65f
             buttons[second].alpha = 0.65f
+            buttons[first].performHapticFeedback(1)
+            buttons[second].performHapticFeedback(1)
             matches++
             combo++
             score += 100 + combo * 20
