@@ -70,7 +70,8 @@ class MainActivity : ComponentActivity() {
     private fun startGame(size: Int, timeRush: Boolean) {
         level = size
         val pairs = (size * size) / 2
-        cards = (symbols.shuffled().take(pairs) * 2).shuffled().toMutableList()
+        val selected = symbols.shuffled().take(pairs)
+        cards = (selected + selected).shuffled().toMutableList()
         first = -1; second = -1; moves = 0; matches = 0; combo = 0; score = 0; seconds = 0
         running = true
         handler.removeCallbacks(tick)
